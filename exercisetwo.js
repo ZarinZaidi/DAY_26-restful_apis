@@ -47,3 +47,7 @@ app.post('/products', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
 });
+
+//You can test these endpoints using tools like curl.
+//curl -X POST -H "Content-Type: application/json" -d "{\"name\":\"New Product\",\"price\":30}" http://localhost:3000/products
+//Adjust the command as needed for your product data.
