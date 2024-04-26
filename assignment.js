@@ -22,6 +22,11 @@ let actors = [
     { id: 3, name: 'Chutimon Chuengcharoensukying (Aokbab)' },
 ];
 
+// Route for hello/welcome page
+app.get('/', (req, res) => {
+    res.json({ message: 'Hello, welcome to Assignment submission page. Task given is as below:', objective: 'Design a RESTful API for a movie database that allows users to manage movies, directors, and actors.', requirements: ['1. Use CRUD operations (Create, Read, Update, Delete) and map them to HTTP methods (POST, GET, PUT, DELETE) for different API functionalities.', '2. Design URIs for accessing resources in the API.', '3. Practice building JSON payloads for API requests.'], instructions: ['1. Design the URIs and map CRUD operations to HTTP methods for each API functionality.', '2. Write example JSON payloads for requests such as adding a new movie, updating a director, etc.', '3. Document your API design decisions and any assumptions made.'] });
+});
+
 //Movies API 
 //Get all the movies 
 app.get('/movies', (req, res) => {
@@ -169,6 +174,7 @@ app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
 });
 
+//PAYLOADS EXAMPLE USING CURL
 /*Movies API
 GET:
 curl http://localhost:3000/movies
@@ -184,6 +190,7 @@ DELETE:
 curl -X DELETE http://localhost:3000/movies/{id}
 */
 
+
 /*Directors API
 GET:
 curl http://localhost:3000/directors
@@ -198,6 +205,7 @@ curl -X PUT http://localhost:3000/directors/{id} -H "Content-Type: application/j
 DELETE:
 curl -X DELETE http://localhost:3000/directors/{id}
 */
+
 
 /*Actors API
 GET:

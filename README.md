@@ -10,3 +10,8 @@ The output screenshot can be accessed in images folder also.
 
 Please access exercisetwo.js for the Exercise 2 code.
 
+### Assignment Submission
+
+Please access assignment.js for the Assignment code.
+
+Payloads example are included as comment at the end of assignment.js
